@@ -1,0 +1,78 @@
+/* Fullscreen Background Video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;  /* Place it behind the content */
+    filter: brightness(50%);  /* Darken video for better text readability */
+}
+
+/* Content Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #fff;  /* Light text for contrast */
+}
+
+.content {
+    position: relative;
+    z-index: 1;  /* Ensure content stays above video */
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #fff;
+}
+
+.section {
+    background: rgba(0, 0, 0, 0.6);  /* Semi-transparent background */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    text-align: center;  /* This centers the text */
+}
+.section {
+    background: rgba(0, 0, 0, 0.6);  /* Semi-transparent background */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effect: Glow and Slight Lift */
+.section:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);  /* Cyan glow effect */
+    transform: translateY(-5px);  /* Slight lift on hover */
+}

@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+}
+
+.footer {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    background: #111;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.8);
+    color: #fff;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    background: #111;
+    color: #fff;
+    border: 2px solid #2563eb;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.filter-buttons button:hover, .filter-buttons button.active {
+    background: #2563eb;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.8);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery a {
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.8);
+}
+
+/* Making some images taller or wider */
+.gallery a:nth-child(1) { grid-row: span 2; }
+.gallery a:nth-child(3) { grid-column: span 2; }
+.gallery a:nth-child(5) { grid-row: span 2; }
